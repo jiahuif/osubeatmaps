@@ -36,10 +36,18 @@ class Beatmap(models.Model):
         return "%d %s - %s" % (self.id, self.artist, self.title)
 
 
+class DownloadServer(models.Model):
+    name = models.CharField(max_length=255)
+    location = models.CharField(max_length=2)
+
+    def __unicode__(self):
+        return "%d - %s @ %s" % (self.id, self.name, self.location)
+
+
 class Download(models.Model):
     beatmap = models.ForeignKey(Beatmap)
-    server = models.CharField(max_length=255)
+    server = models.ForeignKey(DownloadServer)
     url = models.CharField(max_length=255)
 
     def __unicode__(self):
-        return "[%d][%s] %s" % (self.beatmap_id, self.server, self.url)
+        return "[%d][%s]%s" % (self.beatmap_id, self.server.name, self.url)
