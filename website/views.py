@@ -12,7 +12,7 @@ class IndexView(generic.TemplateView):
 
 def listing(request, genre_id, language_id, page_id):
     try:
-        mgr = Beatmap.objects.order_by('-date_ranked')
+        mgr = Beatmap.objects.order_by('-date_ranked').select_related()
         if genre_id:
             mgr.filter(genre_id=genre_id)
         if language_id:
