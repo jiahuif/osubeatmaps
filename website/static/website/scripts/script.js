@@ -90,3 +90,7 @@ function do_search(form) {
 	location.assign(uri);
 	return false;
 }
+
+function redirect_to(url) {
+    location.href = url;
+}
