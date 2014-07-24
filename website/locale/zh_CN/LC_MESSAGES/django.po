@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-24 19:29+0800\n"
+"POT-Creation-Date: 2014-07-24 22:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,77 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/website/base.html:34
+#. Translators: Genres
+#. Translators: Languages
+#: texts.py:6 texts.py:18
+msgid "Any"
+msgstr "任意"
+
+#: texts.py:7
+msgid "Unspecified"
+msgstr "未指定"
+
+#: texts.py:8
+msgid "Video Game"
+msgstr "游戏"
+
+#: texts.py:9
+msgid "Anime"
+msgstr "动漫"
+
+#: texts.py:10
+msgid "Rock"
+msgstr "摇滚"
+
+#: texts.py:11
+msgid "Pop"
+msgstr "流行"
+
+#: texts.py:12 texts.py:19
+msgid "Other"
+msgstr "其它"
+
+#: texts.py:13
+msgid "Novelty"
+msgstr "新奇"
+
+#: texts.py:14
+msgid "Hip Hop"
+msgstr "嘻哈"
+
+#: texts.py:15
+msgid "Techno"
+msgstr "铁克诺"
+
+#: texts.py:20
+msgid "Instrumental"
+msgstr "纯音乐"
+
+#: templates/website/base.html:48
 msgid "Search"
 msgstr "搜索"
 
-#: templates/website/base.html:45
+#: templates/website/base.html:59
 msgid "Official osu! Website"
 msgstr "osu! 官方网站"
 
-#: templates/website/base.html:48 templates/website/disclaimer.html:6
+#: templates/website/base.html:62 templates/website/disclaimer.html:6
 #: templates/website/disclaimer.html:11
 msgid "Disclaimer"
 msgstr "免责声明"
 
 #: templates/website/disclaimer.html:4 templates/website/index.html:4
+#: templates/website/listing.html:5
 msgid "Home"
 msgstr "首页"
 
-#: templates/website/disclaimer.html:14
-msgid ""
-"We do NOT claim ownership or copyright on any content that is provided on "
-"this site. All content is originally uploaded by osu! users and copyright of "
-"all beatmaps and content included by the beatmaps belongs to the original "
-"authors. We provide all content as-is and can NOT be held responsible for "
-"the content."
-msgstr ""
-
-#: templates/website/index.html:6
+#: templates/website/index.html:6 templates/website/listing.html:8
 msgid "Listing"
 msgstr "曲谱列表"
+
+#: templates/website/listing.html:25
+msgid "mapped by"
+msgstr "作者: "
+
