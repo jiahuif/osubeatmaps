@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
@@ -27,3 +27,8 @@ def listing(request, genre_id, language_id, page_id):
 
 class DisclaimerView(generic.TemplateView):
     template_name = 'website/disclaimer.html'
+
+
+def item(request, beatmap_id):
+    beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
+    return render(request, 'website/item.html', {"beatmap": beatmap})

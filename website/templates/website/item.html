@@ -1,0 +1,12 @@
+{% extends "website/base.html" %}
+{% load i18n %}
+{% load difficulties_splitter %}
+{% block nav_line %}
+    <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
+    <li class="right">»</li>
+    <li class="nav_item"><a
+            href="{% url 'website:listing' 0 0 1 %}">{% trans 'Listing' %}</a></li>
+    <li class="right">»</li>
+    <li class="nav_item nav_item_selected"><a
+            href="{% url 'website:item' beatmap.id %}">{{ beatmap.artist }} - {{ beatmap.title }}</a></li>
+{% endblock %}

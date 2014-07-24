@@ -12,14 +12,14 @@
     <div class="listing_content">
         {% for item in beatmaps %}
             <div class="listing_item">
-            <a class="listing_img_link" href="#"><img src="http://b.ppy.sh/thumb/{{ item.id }}.jpg"
+            <a class="listing_img_link" href="{% url 'website:item' item.id %}"><img src="http://b.ppy.sh/thumb/{{ item.id }}.jpg"
                                                       class="listing_item_img" alt="{{ item.title }}" width="80"
                                                       height="60"/></a>
             <div class="listing_item_content">
             <div class="listing_item_title">
                 <a href="#" class="item_artist">{{ item.artist }}</a>
                 <span> - </span>
-                <a href="#" class="item_title">{{ item.title }}</a>
+                <a href="{% url 'website:item' item.id %}" class="item_title">{{ item.title }}</a>
             </div>
             <div class="listing_item_creator">
                 {% trans 'mapped by' %} <a href="http://osu.ppy.sh/u/{{ item.creator }}">{{ item.creator }}</a>
