@@ -22,38 +22,38 @@
 <body class="custom_bg a-font">
 <div class="container">
 
-    <div class="header"><a href="{% url 'website:index' %}" class="header_title">osu! Beatmaps</a>
+    <header class="header"><a href="{% url 'website:index' %}" class="header_title">osu! Beatmaps</a>
 
         <div class="language_switch">
             <select id="language-selection" onchange="return redirect_to($(this).val()) || true;">
                 {% for lang_code, lang_name in languages %}
 
-                        <option value="{% change_lang lang_code %}" {% if LANGUAGE_CODE == lang_code %}
-                                selected {% endif %}> {{ lang_code|language_name_local }}</option>
+                    <option value="{% change_lang lang_code %}" {% if LANGUAGE_CODE == lang_code %}
+                            selected {% endif %}> {{ lang_code|language_name_local }}</option>
 
                 {% endfor %}
             </select>
         </div>
-    </div>
+    </header>
 
 
-    <div class="nav">
+    <nav class="nav">
         <ul class="nav_line no_select">
             {% block nav_line %}
             {% endblock %}
         </ul>
         <div class="nav_search">
-            <form action="" method="post" id="search_form" onsubmit="return do_search(this);">
+            <form action="/" method="post" id="search_form" onsubmit="return do_search(this);">
                 <input name="keyword" type="text" id="keyword" style="width:400px"/>
                 <input name="" type="submit" value="{% trans 'Search' %}"/>
             </form>
         </div>
-    </div>
-    <div class="content">
+    </nav>
+    <article class="content">
         {% block content %}{% endblock %}
-    </div>
+    </article>
 
-    <div class="footer">
+    <footer class="footer">
         <div class="footer_links f-left no_select">
             <div class="footer_link">
                 <a href="http://osu.ppy.sh">{% trans 'Official osu! Website' %}</a>
@@ -65,7 +65,7 @@
         <div class="f-right light">
             <span>{% now "DATETIME_FORMAT" %}</span>
         </div>
-    </div>
+    </footer>
 </div>
 </body>
 </html>
