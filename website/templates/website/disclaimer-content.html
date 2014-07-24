@@ -1,0 +1,9 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == 'zh' %}
+    <p>本站对所有内容不宣称拥有所有权或版权。所有内容最初由osu!的用户上传，所有曲谱以及相关内容的版权归原作者所有。本站内容为原样打包，不对任何内容负任何责任。</p>
+{% else %}
+    <p>We do NOT claim ownership or copyright on any content that is provided on this site. All content is originally
+        uploaded by osu! users and copyright of all beatmaps and content included by the beatmaps belongs to the
+        original authors. We provide all content as-is and can NOT be held responsible for the content.</p>
+{% endif %}

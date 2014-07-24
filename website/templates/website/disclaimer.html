@@ -9,15 +9,6 @@
 {% block content %}
     <div class="home_des" id="disclaimer">
         <h1>{% trans 'Disclaimer' %}</h1>
-
-        <p>
-            {% blocktrans %}
-                We do NOT claim ownership or copyright on any content that is provided on this site.
-                All content is originally uploaded by osu! users and copyright of all beatmaps and content included by
-                the
-                beatmaps belongs to the original authors.
-                We provide all content as-is and can NOT be held responsible for the content.
-            {% endblocktrans %}
-        </p>
+        {% include 'website/disclaimer-content.html' %}
     </div>
 {% endblock %}
