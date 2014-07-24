@@ -45,6 +45,7 @@ MIDDLEWARE_CLASSES = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
     'django.contrib.auth.context_processors.auth'
 )
 
@@ -67,11 +68,11 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGES = (
-    ('zh', _('Simplified Chinese')),
+    ('zh-cn', _('Simplified Chinese')),
     ('en', _('English')),
 )
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 

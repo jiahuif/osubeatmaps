@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-24 19:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/website/base.html:34
+msgid "Search"
+msgstr "搜索"
+
+#: templates/website/base.html:45
+msgid "Official osu! Website"
+msgstr "osu! 官方网站"
+
+#: templates/website/base.html:48 templates/website/disclaimer.html:6
+#: templates/website/disclaimer.html:11
+msgid "Disclaimer"
+msgstr "免责声明"
+
+#: templates/website/disclaimer.html:4 templates/website/index.html:4
+msgid "Home"
+msgstr "首页"
+
+#: templates/website/disclaimer.html:14
+msgid ""
+"We do NOT claim ownership or copyright on any content that is provided on "
+"this site. All content is originally uploaded by osu! users and copyright of "
+"all beatmaps and content included by the beatmaps belongs to the original "
+"authors. We provide all content as-is and can NOT be held responsible for "
+"the content."
+msgstr ""
+
+#: templates/website/index.html:6
+msgid "Listing"
+msgstr "曲谱列表"

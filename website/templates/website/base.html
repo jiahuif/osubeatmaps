@@ -1,8 +1,9 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load lang_url %}
 <!DOCTYPE html>
 <html>
-<head lang="{% block language_tag %}en{% endblock %}">
+<head lang="{{ LANGUAGE_CODE }}">
     <meta charset="UTF-8">
     <title>{% block title %}osu! Beatmaps{% endblock %}</title>
     <link href="{% static 'website/styles/style.css' %}" rel="stylesheet" type="text/css"/>
@@ -12,13 +13,26 @@
     <script src="{% static 'website/scripts/jquery-1.9.1.min.js' %}" language="javascript"
             type="text/javascript"></script>
     <script src="{% static 'website/scripts/script.js' %}" language="javascript" type="text/javascript"></script>
+    {% get_available_languages as languages %}
+
+    {% for lang_code, lang_name in languages %}
+        <link rel="alternate" hreflang="{{ lang_code }}" href="{% change_lang lang_code %}">
+    {% endfor %}
 </head>
 <body class="custom_bg a-font">
 <div class="container">
+
     <div class="header"><a href="{% url 'website:index' %}" class="header_title">osu! Beatmaps</a>
 
         <div class="language_switch">
-            <a href="#">[Switch Language/切换语言]</a>
+            <select id="language-selection" onchange="return redirect_to($(this).val()) || true;">
+                {% for lang_code, lang_name in languages %}
+
+                        <option value="{% change_lang lang_code %}" {% if LANGUAGE_CODE == lang_code %}
+                                selected {% endif %}> {{ lang_code|language_name_local }}</option>
+
+                {% endfor %}
+            </select>
         </div>
     </div>
 
