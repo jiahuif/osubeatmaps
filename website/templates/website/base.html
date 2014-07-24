@@ -1,0 +1,57 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head lang="{% block language_tag %}en{% endblock %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}osu! Beatmaps{% endblock %}</title>
+    <link href="{% static 'website/styles/style.css' %}" rel="stylesheet" type="text/css"/>
+    <!--[if IE]>
+    <link href="{% static 'website/styles/ie.css' %}" rel="stylesheet" type="text/css" />
+	<![endif]-->
+    <script src="{% static 'website/scripts/jquery-1.9.1.min.js' %}" language="javascript"
+            type="text/javascript"></script>
+    <script src="{% static 'website/scripts/script.js' %}" language="javascript" type="text/javascript"></script>
+</head>
+<body class="custom_bg a-font">
+<div class="container">
+    <div class="header"><a href="{% url 'website:index' %}" class="header_title">osu! Beatmaps</a>
+
+        <div class="language_switch">
+            <a href="#">[Switch Language/切换语言]</a>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <ul class="nav_line no_select">
+            {% block nav_line %}
+            {% endblock %}
+        </ul>
+        <div class="nav_search">
+            <form action="" method="post" id="search_form" onsubmit="return do_search(this);">
+                <input name="keyword" type="text" id="keyword" style="width:400px"/>
+                <input name="" type="submit" value="Search"/>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="footer">
+        <div class="footer_links f-left no_select">
+            <div class="footer_link">
+                <a href="http://osu.ppy.sh">{% trans 'Official osu! Website' %}</a>
+            </div>
+            <div class="footer_link">
+                <a href="{% url 'website:disclaimer' %}">{% trans 'Disclaimer' %}</a>
+            </div>
+        </div>
+        <div class="f-right light">
+            <span>{% now "DATETIME_FORMAT" %}</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

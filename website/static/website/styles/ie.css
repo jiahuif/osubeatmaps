@@ -1,0 +1,4 @@
+button, .button, input[type="submit"], input[type="button"], input[type="reset"]
+{
+   padding: 8px 10px 5px 10px;
+}
