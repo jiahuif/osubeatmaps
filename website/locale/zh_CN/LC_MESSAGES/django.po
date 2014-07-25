@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-25 12:32+0800\n"
+"POT-Creation-Date: 2014-07-25 13:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,15 +77,30 @@ msgstr "osu! 官方网站"
 msgid "Disclaimer"
 msgstr "免责声明"
 
-#: templates/website/disclaimer.html:4 templates/website/index.html:4
-#: templates/website/item.html:5 templates/website/listing.html:5
+#: templates/website/disclaimer.html:4 templates/website/download.html:4
+#: templates/website/index.html:4 templates/website/item.html:5
+#: templates/website/listing.html:5
 msgid "Home"
 msgstr "首页"
 
-#: templates/website/index.html:6 templates/website/item.html:8
-#: templates/website/listing.html:8
+#: templates/website/download.html:7 templates/website/index.html:6
+#: templates/website/item.html:8 templates/website/listing.html:8
 msgid "Listing"
 msgstr "曲谱列表"
+
+#: templates/website/download.html:13 templates/website/item.html:60
+msgid "Download"
+msgstr "下载"
+
+#: templates/website/download.html:26
+msgid ""
+"To save on download time, it is recommended to choose a mirror site closest "
+"to your location."
+msgstr "为了节省下载的时间，请选择距离您最近的下载镜像。"
+
+#: templates/website/download.html:38
+msgid "No mirrors avaliable. Please check back later."
+msgstr "目前没有可用的下载镜像，请稍后再来。"
 
 #: templates/website/item.html:20
 msgid "Artist"
@@ -123,14 +138,15 @@ msgstr "开始排名时间"
 msgid "Difficulites"
 msgstr "难度"
 
-#: templates/website/item.html:60
-msgid "Download"
-msgstr "下载"
-
 #: templates/website/item.html:65
 msgid "Detail"
 msgstr "详情"
 
-#: templates/website/listing.html:25
+#: templates/website/listing.html:9
+#, python-format
+msgid "Page %(page_id)s"
+msgstr "第 %(page_id)s 页"
+
+#: templates/website/listing.html:28
 msgid "mapped by"
 msgstr "作者: "
