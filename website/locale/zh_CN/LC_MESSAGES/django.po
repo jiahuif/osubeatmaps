@@ -135,7 +135,7 @@ msgid "Ranked On"
 msgstr "开始排名时间"
 
 #: templates/website/item.html:47
-msgid "Difficulites"
+msgid "Difficulties"
 msgstr "难度"
 
 #: templates/website/item.html:65
