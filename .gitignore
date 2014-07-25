@@ -58,3 +58,6 @@ target/
 # Database for development
 db.sqlite3
 
+# Local/production settings
+settings_local.py
+
