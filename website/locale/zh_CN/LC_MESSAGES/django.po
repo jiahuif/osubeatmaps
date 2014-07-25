@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-25 13:22+0800\n"
+"POT-Creation-Date: 2014-07-25 17:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,47 +20,63 @@ msgstr ""
 
 #. Translators: Genres
 #. Translators: Languages
-#: texts.py:6 texts.py:18
+#: texts.py:6 texts.py:27
 msgid "Any"
 msgstr "任意"
 
-#: texts.py:7
+#. Translators: Genres
+#: texts.py:8
 msgid "Unspecified"
 msgstr "未指定"
 
-#: texts.py:8
+#. Translators: Genres
+#: texts.py:10
 msgid "Video Game"
 msgstr "游戏"
 
-#: texts.py:9
+#. Translators: Genres
+#: texts.py:12
 msgid "Anime"
 msgstr "动漫"
 
-#: texts.py:10
+#. Translators: Genres
+#: texts.py:14
 msgid "Rock"
 msgstr "摇滚"
 
-#: texts.py:11
+#. Translators: Genres
+#: texts.py:16
 msgid "Pop"
 msgstr "流行"
 
-#: texts.py:12 texts.py:19
+#. Translators: Genres
+#. Translators: Languages
+#: texts.py:18 texts.py:31
 msgid "Other"
 msgstr "其它"
 
-#: texts.py:13
+#. Translators: Genres
+#: texts.py:20
 msgid "Novelty"
 msgstr "新奇"
 
-#: texts.py:14
+#. Translators: Genres
+#: texts.py:22
 msgid "Hip Hop"
 msgstr "嘻哈"
 
-#: texts.py:15
+#. Translators: Genres
+#: texts.py:24
 msgid "Techno"
 msgstr "铁克诺"
 
-#: texts.py:20
+#. Translators: Languages
+#: texts.py:29
+msgid "Chinese"
+msgstr "中文"
+
+#. Translators: Languages
+#: texts.py:33
 msgid "Instrumental"
 msgstr "纯音乐"
 
@@ -84,11 +100,12 @@ msgid "Home"
 msgstr "首页"
 
 #: templates/website/download.html:7 templates/website/index.html:6
-#: templates/website/item.html:8 templates/website/listing.html:8
+#: templates/website/item.html:8 templates/website/listing.html:9
+#: templates/website/listing.html.py:13
 msgid "Listing"
 msgstr "曲谱列表"
 
-#: templates/website/download.html:13 templates/website/item.html:60
+#: templates/website/download.html:13 templates/website/item.html:62
 msgid "Download"
 msgstr "下载"
 
@@ -106,7 +123,7 @@ msgstr "目前没有可用的下载镜像，请稍后再来。"
 msgid "Artist"
 msgstr "艺术家"
 
-#: templates/website/item.html:22
+#: templates/website/item.html:22 templates/website/listing.html:16
 msgid "Genre"
 msgstr "类型"
 
@@ -114,39 +131,39 @@ msgstr "类型"
 msgid "Title"
 msgstr "标题"
 
-#: templates/website/item.html:30
+#: templates/website/item.html:30 templates/website/listing.html:18
 msgid "Language"
 msgstr "语言"
 
-#: templates/website/item.html:35
+#: templates/website/item.html:36
 msgid "Creator"
 msgstr "作者"
 
-#: templates/website/item.html:37
+#: templates/website/item.html:39
 msgid "Submitted On"
 msgstr "提交日期"
 
-#: templates/website/item.html:41
+#: templates/website/item.html:43
 msgid "Source"
 msgstr "来源"
 
-#: templates/website/item.html:43
+#: templates/website/item.html:45
 msgid "Ranked On"
 msgstr "开始排名时间"
 
-#: templates/website/item.html:47
+#: templates/website/item.html:49
 msgid "Difficulties"
 msgstr "难度"
 
-#: templates/website/item.html:65
+#: templates/website/item.html:67
 msgid "Detail"
 msgstr "详情"
 
-#: templates/website/listing.html:9
+#: templates/website/listing.html:22
 #, python-format
 msgid "Page %(page_id)s"
 msgstr "第 %(page_id)s 页"
 
-#: templates/website/listing.html:28
+#: templates/website/listing.html:42
 msgid "mapped by"
 msgstr "作者: "
