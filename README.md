@@ -13,7 +13,6 @@ Crawler
 A crawler that fetch beatmaps from osu! official website.
 
 ###Requirement###
-- ``website`` the website mentioned above.
 - ``requests`` for HTTP requests. (install via pip)
 - ``pyquery`` for HTML parsing. (install via pip)
 
@@ -23,4 +22,3 @@ A deamon that detects new beatmaps and download them.
 
 ###Requirement###
 - ``crawler`` the crawler menthioned above.
-
