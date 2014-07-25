@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from website.models import Beatmap
+from website.models import Beatmap, Genre, Language
 
 
 class IndexView(generic.TemplateView):
@@ -13,16 +13,23 @@ class IndexView(generic.TemplateView):
 def listing(request, genre_id, language_id, page_id):
     try:
         mgr = Beatmap.objects.order_by('-date_ranked').select_related()
+        genre_id, language_id = int(genre_id), int(language_id)
+        genre = None
+        language = None
         if genre_id:
-            mgr.filter(genre_id=genre_id)
+            genre = get_object_or_404(Genre, pk=genre_id)
+            mgr.filter(genre_id=genre.id)
         if language_id:
-            mgr.filter(language_id=language_id)
+            language = get_object_or_404(Language, pk=language_id)
+            mgr.filter(language_id=language.id)
+
         paginator = Paginator(mgr, 30)
         beatmaps = paginator.page(page_id)
     except EmptyPage or PageNotAnInteger as exception:
         raise Http404(exception)
     return render(request, 'website/listing.html',
-                  {"genre_id": genre_id, "language_id": language_id, "page_id": page_id, "beatmaps": beatmaps})
+                  {"genre_id": genre_id, "language_id": language_id, "genre": genre, "language": language,
+                   "page_id": page_id, "beatmaps": beatmaps})
 
 
 class DisclaimerView(generic.TemplateView):
