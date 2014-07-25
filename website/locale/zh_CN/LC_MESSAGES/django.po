@@ -67,8 +67,8 @@ msgstr "嘻哈"
 
 #. Translators: Genres
 #: texts.py:24
-msgid "Techno"
-msgstr "铁克诺"
+msgid "Electronic"
+msgstr "电子"
 
 #. Translators: Languages
 #: texts.py:29

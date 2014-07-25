@@ -21,7 +21,7 @@ GENRE_NOVELTY = _("Novelty")
 # Translators: Genres
 GENRE_HIP_HOP = _("Hip Hop")
 # Translators: Genres
-GENRE_TECHNO = _("Techno")
+GENRE_ELECTRONIC = _("Electronic")
 
 # Translators: Languages
 LANGUAGE_ANY = _("Any")
