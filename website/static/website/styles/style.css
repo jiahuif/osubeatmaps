@@ -435,6 +435,7 @@ button, input, textarea {
     position: absolute;
     top: 25px;
     left: 100px;
+    z-index: 1;
 }
 
 .listing_item_content {
@@ -552,8 +553,9 @@ button, input, textarea {
     float: right;
     position: absolute;
     bottom: 10px;
-    font-size: 90%;
+    font-size: 95%;
     right: 5px;
+    z-index: 1;
 }
 
 .tag_link {
