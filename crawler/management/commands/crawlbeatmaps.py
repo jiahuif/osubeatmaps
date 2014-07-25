@@ -1,6 +1,6 @@
 from django.core.management import BaseCommand, CommandError
 
-from crawler.main import BeatmapCrawler, BeatmapNotRanked
+from crawler.main import BeatmapCrawler, BeatmapNotRanked, BeatmapNotFound
 
 
 class Command(BaseCommand):
@@ -17,4 +17,5 @@ class Command(BaseCommand):
                 self.stderr.write("Saved: %s" % beatmap)
             except BeatmapNotRanked:
                 raise CommandError('Beatmap #%d was not ranked.' % beatmap_id)
-
+            except BeatmapNotFound:
+                raise CommandError('Beatmap #%d was not found.' % beatmap_id)
