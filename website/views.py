@@ -18,11 +18,10 @@ def listing(request, genre_id, language_id, page_id):
         language = None
         if genre_id:
             genre = get_object_or_404(Genre, pk=genre_id)
-            mgr.filter(genre_id=genre.id)
+            mgr = mgr.filter(genre_id=genre.id)
         if language_id:
             language = get_object_or_404(Language, pk=language_id)
-            mgr.filter(language_id=language.id)
-
+            mgr = mgr.filter(language_id=language.id)
         paginator = Paginator(mgr, 30)
         beatmaps = paginator.page(page_id)
     except EmptyPage or PageNotAnInteger as exception:
