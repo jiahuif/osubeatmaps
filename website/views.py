@@ -42,4 +42,5 @@ def detail(request, beatmap_id):
 
 
 def download(request, beatmap_id):
-    pass  # todo fix it.
+    beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
+    return render(request, 'website/download.html', {"beatmap": beatmap})

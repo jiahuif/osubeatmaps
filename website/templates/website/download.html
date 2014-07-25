@@ -1,0 +1,42 @@
+{% extends "website/base.html" %}
+{% load i18n %}
+{% block nav_line %}
+    <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
+    <li class="right">»</li>
+    <li class="nav_item"><a
+            href="{% url 'website:listing' 0 0 1 %}">{% trans 'Listing' %}</a></li>
+    <li class="right">»</li>
+    <li class="nav_item"><a
+            href="{% url 'website:item' beatmap.id %}">{{ beatmap.artist }} - {{ beatmap.title }}</a></li>
+    <li class="right">»</li>
+    <li class="nav_item nav_item_selected">
+        <a href="{% url 'website:download' beatmap.id %}">{% trans 'Download' %}</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></div>
+    <div id="bm_download_content">
+        <div id="bm_info_preview_img">
+            <img id="bm_download_preview" src="http://b.ppy.sh/thumb/{{ beatmap.id }}l.jpg" width="160" height="120"
+                 alt="Preview Image"
+                    />
+        </div>
+        <div id="bm_download_list">
+            <p id="bm_download_hint">{% trans 'To save on download time, it is recommended to choose a mirror site closest to your location.' %}</p>
+
+            {% if beatmap.download_set.count %}
+                <ul>
+                    {% for download in beatmap.download_set.all %}
+                        <li class="mirror_site_item">
+                            <a class="mirror_link" id="download_link_{{ forloop.counter }}" rel="nofollow"
+                               href="{{ download.url }}"> {% trans download.server.name %}
+                                <span class="country">{% trans download.server.location %}</span></a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p style="font-size: 80%; color:grey;">{% trans 'No mirrors avaliable. Please check back later.' %}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
