@@ -22,32 +22,34 @@
     <div class="listing_content">
         {% for item in beatmaps %}
             <div class="listing_item">
-            <a class="listing_img_link" href="{% url 'website:item' item.id %}"><img
-                    src="http://b.ppy.sh/thumb/{{ item.id }}.jpg"
-                    class="listing_item_img" alt="{{ item.title }}" width="80"
-                    height="60"/></a>
-            <div class="listing_item_content">
-            <div class="listing_item_title">
-                <a href="#" class="item_artist">{{ item.artist }}</a>
-                <span> - </span>
-                <a href="{% url 'website:item' item.id %}" class="item_title">{{ item.title }}</a>
-            </div>
-            <div class="listing_item_creator">
-                {% trans 'mapped by' %} <a href="{% url 'website:user' item.creator %}">{{ item.creator }}</a>
-            </div>
-            <div class="right-info">
-                <a href="{% url 'website:listing' item.genre.id 0 1 %}"
-                   class="tag_link">{% trans item.genre.caption %}</a>
-                <a href="{% url 'website:listing' 0 item.language.id 1 %}"
-                   class="tag_link">{% trans item.language.caption %}</a>
-            </div>
-            <div class="listing_item_difficulties no_select">
-                {% for difficulty in item.difficulties|split_difficulties %}
-                    <div class="difficulty d_{{ difficulty }}"></div>
-                {% endfor %}
+                <a class="listing_img_link" href="{% url 'website:item' item.id %}"><img
+                        src="http://b.ppy.sh/thumb/{{ item.id }}.jpg"
+                        class="listing_item_img" alt="{{ item.title }}" width="80"
+                        height="60"/></a>
+
+                <div class="listing_item_content">
+                    <div class="listing_item_title">
+                        <a href="#" class="item_artist">{{ item.artist }}</a>
+                        <span> - </span>
+                        <a href="{% url 'website:item' item.id %}" class="item_title">{{ item.title }}</a>
+                    </div>
+                    <div class="listing_item_creator">
+                        {% trans 'mapped by' %} <a href="{% url 'website:user' item.creator %}">{{ item.creator }}</a>
+                    </div>
+                    <div class="right-info">
+                        <a href="{% url 'website:listing' item.genre.id 0 1 %}"
+                           class="tag_link">{% trans item.genre.caption %}</a>
+                        <a href="{% url 'website:listing' 0 item.language.id 1 %}"
+                           class="tag_link">{% trans item.language.caption %}</a>
+                    </div>
+                    <div class="listing_item_difficulties no_select">
+                        {% for difficulty in item.difficulties|split_difficulties %}
+                            <div class="difficulty d_{{ difficulty }}"></div>
+                        {% endfor %}
+                    </div>
+
+                </div>
             </div>
         {% endfor %}
-        </div>
-        </div>
     </div>
 {% endblock %}
