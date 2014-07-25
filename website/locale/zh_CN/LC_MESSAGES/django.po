@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-24 22:32+0800\n"
+"POT-Creation-Date: 2014-07-25 12:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,15 +78,59 @@ msgid "Disclaimer"
 msgstr "免责声明"
 
 #: templates/website/disclaimer.html:4 templates/website/index.html:4
-#: templates/website/listing.html:5
+#: templates/website/item.html:5 templates/website/listing.html:5
 msgid "Home"
 msgstr "首页"
 
-#: templates/website/index.html:6 templates/website/listing.html:8
+#: templates/website/index.html:6 templates/website/item.html:8
+#: templates/website/listing.html:8
 msgid "Listing"
 msgstr "曲谱列表"
+
+#: templates/website/item.html:20
+msgid "Artist"
+msgstr "艺术家"
+
+#: templates/website/item.html:22
+msgid "Genre"
+msgstr "类型"
+
+#: templates/website/item.html:28
+msgid "Title"
+msgstr "标题"
+
+#: templates/website/item.html:30
+msgid "Language"
+msgstr "语言"
+
+#: templates/website/item.html:35
+msgid "Creator"
+msgstr "作者"
+
+#: templates/website/item.html:37
+msgid "Submitted On"
+msgstr "提交日期"
+
+#: templates/website/item.html:41
+msgid "Source"
+msgstr "来源"
+
+#: templates/website/item.html:43
+msgid "Ranked On"
+msgstr "开始排名时间"
+
+#: templates/website/item.html:47
+msgid "Difficulites"
+msgstr "难度"
+
+#: templates/website/item.html:60
+msgid "Download"
+msgstr "下载"
+
+#: templates/website/item.html:65
+msgid "Detail"
+msgstr "详情"
 
 #: templates/website/listing.html:25
 msgid "mapped by"
 msgstr "作者: "
-

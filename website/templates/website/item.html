@@ -10,3 +10,71 @@
     <li class="nav_item nav_item_selected"><a
             href="{% url 'website:item' beatmap.id %}">{{ beatmap.artist }} - {{ beatmap.title }}</a></li>
 {% endblock %}
+
+{% block content %}
+    <div class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></div>
+    <div class="bm_info_content">
+        <div id="bm_info_table_container">
+            <table id="bm_info_table" width="100%" cellspacing="0">
+                <tr>
+                    <td class="t_key">{% trans 'Artist' %}</td>
+                    <td class="t_value">{{ beatmap.artist }}</td>
+                    <td class="t_key">{% trans 'Genre' %}</td>
+                    <td class="t_value"><a
+                            href="{% url 'website:listing' beatmap.genre.id 0 1 %}">{% trans beatmap.genre.caption %}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t_key">{% trans 'Title' %}</td>
+                    <td class="t_value">{{ beatmap.title }}</td>
+                    <td class="t_key">{% trans 'Language' %}</td>
+                    <td class="t_value"><a href="{% url 'website:listing' 0 beatmap.language.id 1 %}">{% trans beatmap.language.caption %}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t_key">{% trans 'Creator' %}</td>
+                    <td class="t_value"><a href="u/{{ beatmap.creator }}">{{ beatmap.creator }}</a></td>
+                    <td class="t_key">{% trans 'Submitted On' %}</td>
+                    <td class="t_value">{{ beatmap.date_submitted }}</td>
+                </tr>
+                <tr>
+                    <td class="t_key">{% trans 'Source' %}</td>
+                    <td class="t_value">{{ beatmap.source }}</td>
+                    <td class="t_key">{% trans 'Ranked On' %}</td>
+                    <td class="t_value">{{ beatmap.date_ranked }}</td>
+                </tr>
+                <tr>
+                    <td class="t_key">{% trans 'Difficulites' %}</td>
+                    <td colspan="3">
+                        {% for difficulty in beatmap.difficulties|split_difficulties %}
+                            <div class="difficulty d_{{ difficulty }} item_difficulty"></div>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="bm_buttons">
+            <div id="bm_download" class="btn_container">
+                <a id="bm_download_link" class="no_select cbutton" href="{% url 'website:download' beatmap.id %}"><span
+                        id="bm_download_icon" class="icon"></span><span
+                        class="text">{% trans 'Download' %}</span></a>
+            </div>
+            <div id="bm_details" class="btn_container">
+                <a id="bm_details_link" class="no_select cbutton" href="{% url 'website:detail' beatmap.id %}"><span
+                        id="bm_details_icon" class="icon"></span><span
+                        class="text">{% trans 'Detail' %}</span></a>
+            </div>
+        </div>
+        <div id="bm_info_description_container">
+            <div id="bm_info_description_left">
+                <div id="bm_info_preview_img">
+                    <img src="http://b.ppy.sh/thumb/{{ beatmap.id }}l.jpg" width="160" height="120" alt="Preview Image"
+                            /></div>
+                <div id="bm_info_description_preview_audio"><a href="#">Click to play</a></div>
+            </div>
+            <div id="bm_info_description_content">
+                {{ beatmap.source }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -32,3 +32,14 @@ class DisclaimerView(generic.TemplateView):
 def item(request, beatmap_id):
     beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
     return render(request, 'website/item.html', {"beatmap": beatmap})
+
+
+def detail(request, beatmap_id):
+    try:
+        return redirect('http://osu.ppy.sh/s/%d' % int(beatmap_id))
+    except:
+        raise Http404
+
+
+def download(request, beatmap_id):
+    pass  # todo fix it.
