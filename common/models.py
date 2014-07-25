@@ -47,5 +47,8 @@ class Download(models.Model):
     server = models.ForeignKey(DownloadServer)
     url = models.CharField(max_length=255)
 
+    class Meta:
+        unique_together = ('beatmap', 'server',)
+
     def __unicode__(self):
         return "[%d][%s]%s" % (self.beatmap_id, self.server.name, self.url)
