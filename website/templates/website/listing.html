@@ -4,6 +4,11 @@
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
     <li class="right">»</li>
+    {% if genre_id or language_id %}
+        <li class="nav_item"><a
+                href="{% url 'website:listing' 0 0 1 %}">{% trans 'Listing' %}</a></li>
+        <li class="right">»</li>
+    {% endif %}
     <li class="nav_item nav_item_selected"><a
             href="{% url 'website:listing' genre_id language_id page_id %}">{% trans 'Listing' %}
         {% if genre_id or language_id %}
