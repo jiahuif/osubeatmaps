@@ -42,13 +42,13 @@ def item(request, beatmap_id):
 
 def detail(request, beatmap_id):
     try:
-        return redirect('http://osu.ppy.sh/s/%d' % int(beatmap_id))
+        return redirect('http://osu.ppy.sh/s/%d' % int(beatmap_id), permanent=True)
     except:
         raise Http404
 
 
 def user(request, username):
-    return redirect('http://osu.ppy.sh/u/%s' % username)
+    return redirect('http://osu.ppy.sh/u/%s' % username, permanent=True)
 
 
 def download(request, beatmap_id):
