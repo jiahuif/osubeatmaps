@@ -48,6 +48,10 @@ def detail(request, beatmap_id):
         raise Http404
 
 
+def user(request, username):
+    return redirect('http://osu.ppy.sh/u/%s' % username)
+
+
 def download(request, beatmap_id):
     beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
     return render(request, 'website/download.html', {"beatmap": beatmap})

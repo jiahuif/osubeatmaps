@@ -33,7 +33,7 @@
                 <a href="{% url 'website:item' item.id %}" class="item_title">{{ item.title }}</a>
             </div>
             <div class="listing_item_creator">
-                {% trans 'mapped by' %} <a href="http://osu.ppy.sh/u/{{ item.creator }}">{{ item.creator }}</a>
+                {% trans 'mapped by' %} <a href="{% url 'website:user' item.creator %}">{{ item.creator }}</a>
             </div>
             <div class="right-info">
                 <a href="{% url 'website:listing' item.genre.id 0 1 %}"

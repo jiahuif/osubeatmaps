@@ -28,12 +28,14 @@
                     <td class="t_key">{% trans 'Title' %}</td>
                     <td class="t_value">{{ beatmap.title }}</td>
                     <td class="t_key">{% trans 'Language' %}</td>
-                    <td class="t_value"><a href="{% url 'website:listing' 0 beatmap.language.id 1 %}">{% trans beatmap.language.caption %}</a>
+                    <td class="t_value"><a
+                            href="{% url 'website:listing' 0 beatmap.language.id 1 %}">{% trans beatmap.language.caption %}</a>
                     </td>
                 </tr>
                 <tr>
                     <td class="t_key">{% trans 'Creator' %}</td>
-                    <td class="t_value"><a href="u/{{ beatmap.creator }}">{{ beatmap.creator }}</a></td>
+                    <td class="t_value"><a href="{% url 'website:user' beatmap.creator %}">{{ beatmap.creator }}</a>
+                    </td>
                     <td class="t_key">{% trans 'Submitted On' %}</td>
                     <td class="t_value">{{ beatmap.date_submitted }}</td>
                 </tr>
