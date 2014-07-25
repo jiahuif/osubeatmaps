@@ -38,7 +38,7 @@ class Beatmap(models.Model):
 
 class DownloadServer(models.Model):
     name = models.CharField(max_length=255)
-    location = models.CharField(max_length=2)
+    location = models.CharField(max_length=255)
 
     def __unicode__(self):
         return "%d - %s @ %s" % (self.id, self.name, self.location)
