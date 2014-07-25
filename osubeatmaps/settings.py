@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'common',
     'website',
     'debug_toolbar',
 )

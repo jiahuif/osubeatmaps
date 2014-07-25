@@ -8,7 +8,7 @@ from requests.utils import dict_from_cookiejar
 from pyquery import PyQuery
 
 from settings import COOKIE_JAR_DUMP_FILE
-from website.models import Beatmap, Genre, Language
+from common.models import Beatmap, Genre, Language
 
 
 class LoginFailed(Exception):

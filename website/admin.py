@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import Genre, Language, Beatmap, DownloadServer, Download
+from common.models import Genre, Language, Beatmap, DownloadServer, Download
 
 # Register your models here.
 

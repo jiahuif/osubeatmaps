@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from website.models import Beatmap, Genre, Language
+from common.models import Beatmap, Genre, Language
 
 
 class IndexView(generic.TemplateView):
