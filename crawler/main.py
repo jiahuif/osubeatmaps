@@ -176,3 +176,12 @@ class BeatmapCrawler:
         suggested_filename = options['filename']
         return suggested_filename, response.raw
 
+    @staticmethod
+    def parse_listing_page(content):
+        """
+        :type content basestring
+        :param content: listing page content
+        :return: list of all ids of beatmaps
+        """
+        query = PyQuery(content)
+        return query(".beatmapListing .beatmap").map(lambda i, e: int(e.attrib['id']))
