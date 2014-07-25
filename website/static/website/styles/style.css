@@ -484,6 +484,10 @@ button, input, textarea {
     background-image: url(../images/difficulties/insane.png)
 }
 
+.d_expert {
+    background-image: url(../images/difficulties/expert.png);
+}
+
 .d_easy-t {
     background-image: url(../images/difficulties/easy-t.png)
 }
@@ -498,6 +502,10 @@ button, input, textarea {
 
 .d_insane-t {
     background-image: url(../images/difficulties/insane-t.png)
+}
+
+.d_expert-t {
+    background-image: url(../images/difficulties/expert-t.png);
 }
 
 .d_easy-m {
@@ -516,6 +524,10 @@ button, input, textarea {
     background-image: url(../images/difficulties/insane-m.png)
 }
 
+.d_expert-m {
+    background-image: url(../images/difficulties/expert-m.png)
+}
+
 .d_easy-f {
     background-image: url(../images/difficulties/easy-f.png)
 }
@@ -530,6 +542,10 @@ button, input, textarea {
 
 .d_insane-f {
     background-image: url(../images/difficulties/insane-f.png)
+}
+
+.d_expert-f {
+    background-image: url(../images/difficulties/expert-f.png)
 }
 
 .right-info {
