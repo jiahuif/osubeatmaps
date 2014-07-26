@@ -29,7 +29,7 @@
     {% capture paginator %}
         <!-- Begin paginator -->
         <aside class="page_switch">
-            {% if beaitmaps.has_previous %}
+            {% if beatmaps.has_previous %}
                 <li class="page_prev">
                     <a href="{% url 'website:listing' genre_id language_id beatmaps.previous_page_number %}">
                         {# Translators: Previous Page #}
