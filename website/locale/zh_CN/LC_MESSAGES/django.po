@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-25 17:04+0800\n"
+"POT-Creation-Date: 2014-07-26 23:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,13 +95,13 @@ msgstr "免责声明"
 
 #: templates/website/disclaimer.html:4 templates/website/download.html:4
 #: templates/website/index.html:4 templates/website/item.html:5
-#: templates/website/listing.html:5
+#: templates/website/listing.html:6
 msgid "Home"
 msgstr "首页"
 
 #: templates/website/download.html:7 templates/website/index.html:6
-#: templates/website/item.html:8 templates/website/listing.html:9
-#: templates/website/listing.html.py:13
+#: templates/website/item.html:8 templates/website/listing.html:10
+#: templates/website/listing.html.py:14
 msgid "Listing"
 msgstr "曲谱列表"
 
@@ -123,7 +123,7 @@ msgstr "目前没有可用的下载镜像，请稍后再来。"
 msgid "Artist"
 msgstr "艺术家"
 
-#: templates/website/item.html:22 templates/website/listing.html:16
+#: templates/website/item.html:22 templates/website/listing.html:17
 msgid "Genre"
 msgstr "类型"
 
@@ -131,7 +131,7 @@ msgstr "类型"
 msgid "Title"
 msgstr "标题"
 
-#: templates/website/item.html:30 templates/website/listing.html:18
+#: templates/website/item.html:30 templates/website/listing.html:19
 msgid "Language"
 msgstr "语言"
 
@@ -159,11 +159,21 @@ msgstr "难度"
 msgid "Detail"
 msgstr "详情"
 
-#: templates/website/listing.html:22
+#: templates/website/listing.html:23
 #, python-format
 msgid "Page %(page_id)s"
 msgstr "第 %(page_id)s 页"
 
-#: templates/website/listing.html:42
+#. Translators: Previous Page
+#: templates/website/listing.html:36
+msgid "Prev"
+msgstr "上一页"
+
+#. Translators: Previous Page
+#: templates/website/listing.html:59
+msgid "Next"
+msgstr "下一页"
+
+#: templates/website/listing.html:84
 msgid "mapped by"
 msgstr "作者: "
