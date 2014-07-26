@@ -95,4 +95,69 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 
-
+# Logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '[%(asctime)s] %(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'django.utils.log.NullHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'simple',
+            'filename': '/tmp/django-debug.log',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+            'filter': ['require_debug_false'],
+        }
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['null'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'osubeatmaps': {
+            'handlers': ['null'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        'osubeatmaps.daemon': {
+            'handlers': ['console', 'file', 'mail_admins'],
+            'level': 'DEBUG',
+            'propagate': False,
+        }
+    },
+}
