@@ -1,6 +1,7 @@
 {% extends "website/base.html" %}
 {% load i18n %}
 {% load difficulties_splitter %}
+{% load capture %}
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
     <li class="right">»</li>
@@ -24,7 +25,48 @@
 {% endblock %}
 
 {% block content %}
-    <div class="listing_content">
+
+    {% capture paginator %}
+        <!-- Begin paginator -->
+        <aside class="page_switch">
+            {% if beaitmaps.has_previous %}
+                <li class="page_prev">
+                    <a href="{% url 'website:listing' genre_id language_id beatmaps.previous_page_number %}">
+                        {# Translators: Previous Page #}
+                        {% trans 'Prev' %}
+                    </a>
+                </li>
+            {% endif %}
+            {% for page_num in pages %}
+                {% if page_num %}
+                    <li class="page_link">
+                        {% if page_num != beatmaps.number %}
+                            <a href="{% url 'website:listing' genre_id language_id page_num %}">
+                        {% endif %}
+                        {{ page_num }}
+                        {% if page_num != beatmaps.number %}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% else %}
+                    <li class="page_ellipsis"><span>...</span></li>
+                {% endif %}
+            {% endfor %}
+            {% if beatmaps.has_next %}
+                <li class="page_next">
+                    <a href="{% url 'website:listing' genre_id language_id beatmaps.next_page_number %}">
+                        {# Translators: Previous Page #}
+                        {% trans 'Next' %}
+                    </a>
+                </li>
+            {% endif %}
+        </aside>
+        <!-- End paginator -->
+    {% endcapture %}
+
+    {{ paginator }}
+
+    <article class="listing_content">
         {% for item in beatmaps %}
             <div class="listing_item">
                 <a class="listing_img_link" href="{% url 'website:item' item.id %}"><img
@@ -56,5 +98,8 @@
                 </div>
             </div>
         {% endfor %}
-    </div>
+    </article>
+
+    {{ paginator }}
+
 {% endblock %}

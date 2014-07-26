@@ -24,11 +24,29 @@ def listing(request, genre_id, language_id, page_id):
             mgr = mgr.filter(language_id=language.id)
         paginator = Paginator(mgr, 30)
         beatmaps = paginator.page(page_id)
+        page_id = int(page_id)
+        # process pagination
+        l = paginator.page_range
+        i = l.index(page_id)
+        cnt = 5  # prepend / append pages
+        pages = l[:i][-cnt:] + [page_id] + l[i + 1:][:cnt]
+        # begin with 1 , create something like 1 ... 3 4
+        first_page_id = l[0]
+        if pages[0] - 1 > first_page_id:
+            pages.insert(0, 0)
+        if pages[0] != first_page_id:
+            pages.insert(0, first_page_id)
+        # end with the last page number , create something like 90 91 ... 100
+        last_page_id = l[len(l) - 1]
+        if pages[len(pages) - 1] + 1 < last_page_id:
+            pages.append(0)
+        if pages[len(pages) - 1] != last_page_id:
+            pages.append(last_page_id)
     except EmptyPage or PageNotAnInteger as exception:
         raise Http404(exception)
     return render(request, 'website/listing.html',
                   {"genre_id": genre_id, "language_id": language_id, "genre": genre, "language": language,
-                   "page_id": page_id, "beatmaps": beatmaps})
+                   "page_id": page_id, "beatmaps": beatmaps, 'pages': pages})
 
 
 class DisclaimerView(generic.TemplateView):
