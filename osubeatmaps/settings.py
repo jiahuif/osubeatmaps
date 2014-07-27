@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'common',
     'website',
     'crawler',
+    'daemon',
     'debug_toolbar',
 )
 
@@ -127,7 +128,7 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
-            'filter': ['require_debug_false'],
+            'filters': ['require_debug_false'],
         }
     },
     'filters': {

@@ -18,6 +18,8 @@ OSU_ACCOUNT = {
     'password': 'password',
 }
 
+FETCH_QUEUE_KEY = 'osubeatmap-crawling-queue'
+DOWNLOAD_SLEEP_TIME = 300.0
 # load local settings
 try:
     from daemon.settings_local import *
