@@ -8,7 +8,8 @@
             href="{% url 'website:listing' 0 0 1 %}">{% trans 'Listing' %}</a></li>
     <li class="right">»</li>
     <li class="nav_item"><a
-            href="{% url 'website:item' beatmap.id %}">{{ beatmap.artist }} - {{ beatmap.title }}</a></li>
+            href="{% url 'website:item' beatmap.id %}">{{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}</a>
+    </li>
     <li class="right">»</li>
     <li class="nav_item nav_item_selected">
         <a href="{% url 'website:download' beatmap.id %}">{% trans 'Download' %}</a>
