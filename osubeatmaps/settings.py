@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'common',
     'website',
     'crawler',
@@ -162,3 +163,9 @@ LOGGING = {
         }
     },
 }
+
+# load local settings
+try:
+    from osubeatmaps.settings_local import *
+except ImportError:
+    pass
