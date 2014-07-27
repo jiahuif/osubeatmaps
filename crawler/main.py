@@ -34,7 +34,7 @@ class BeatmapNotDownloading(Exception):
 class BeatmapCrawler:
     def __init__(self, username=None, password=None):
         self.session = Session()
-        self.session.headers.update({'User-Agent', CRAWLER_USER_AGENT})
+        self.session.headers.update({'User-Agent': CRAWLER_USER_AGENT})
         self.username = username
         self.password = password
 
@@ -132,7 +132,7 @@ class BeatmapCrawler:
         url = "https://osu.ppy.sh/s/%d" % beatmap_id
         response = self.session.get(url)
         if "The beatmap you are looking for was not found!" in response.text:
-            raise BeatmapNotFound
+            raise BeatmapNotFound('beatmap #%d was not found.' % beatmap_id)
         query = PyQuery(response.text)
         table = query("table#songinfo")
         rows = table.find("tr")
@@ -140,7 +140,7 @@ class BeatmapCrawler:
             beatmap = Beatmap()
             beatmap.id = beatmap_id
             if "Ranked" not in rows.eq(6).find("td").eq(0).html():
-                raise BeatmapNotRanked  # No "ranked on" field
+                raise BeatmapNotRanked('beatmap #%d was not ranked.' % beatmap_id)  # No "ranked on" field
             beatmap.artist = rows.eq(0).find("a").eq(0).text().strip()
             beatmap.title = rows.eq(1).find("a").eq(0).text().strip()
             beatmap.creator = rows.eq(2).find("a").eq(0).text().strip()
