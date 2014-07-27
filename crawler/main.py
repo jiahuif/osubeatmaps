@@ -7,7 +7,7 @@ from requests.utils import dict_from_cookiejar
 
 from pyquery import PyQuery
 
-from settings import COOKIE_JAR_DUMP_FILE
+from settings import COOKIE_JAR_DUMP_FILE, CRAWLER_USER_AGENT
 from common.models import Beatmap, Genre, Language
 
 
@@ -34,6 +34,7 @@ class BeatmapNotDownloading(Exception):
 class BeatmapCrawler:
     def __init__(self, username=None, password=None):
         self.session = Session()
+        self.session.headers.update({'User-Agent', CRAWLER_USER_AGENT})
         self.username = username
         self.password = password
 
