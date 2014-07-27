@@ -15,8 +15,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></div>
-    <div id="bm_download_content">
+    <header class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></header>
+    <article id="bm_download_content">
         <div id="bm_info_preview_img">
             <img id="bm_download_preview" src="http://b.ppy.sh/thumb/{{ beatmap.id }}l.jpg" width="160" height="120"
                  alt="Preview Image"
@@ -38,5 +38,5 @@
                 <p style="font-size: 80%; color:grey;">{% trans 'No mirrors avaliable. Please check back later.' %}</p>
             {% endif %}
         </div>
-    </div>
+    </article>
 {% endblock %}

@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></div>
-    <div class="bm_info_content">
+    <header class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></header>
+    <article class="bm_info_content">
         <div id="bm_info_table_container">
             <table id="bm_info_table" width="100%" cellspacing="0">
                 <tr>
@@ -78,5 +78,5 @@
                 {{ beatmap.description|safe }}
             </div>
         </div>
-    </div>
+    </article>
 {% endblock %}
