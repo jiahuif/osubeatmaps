@@ -86,7 +86,7 @@ class BeatmapCrawler:
                 'autologin': 'on',
             }
         )
-        self.session.post(form[0].action, post_form)
+        self.session.post(form[0].action, post_form, headers={'Referrer': "https://osu.ppy.sh/"})
         if not self.check_login():
             raise LoginFailed
 
@@ -169,7 +169,7 @@ class BeatmapCrawler:
         :rtype tuple
         """
         url = "https://osu.ppy.sh/d/%d?understood=yes" % beatmap_id
-        response = self.session.get(url, stream=True)
+        response = self.session.get(url, stream=True, headers={'Referrer': "https://osu.ppy.sh/d/%d" % beatmap_id})
         if response.headers['Content-Type'] != 'application/download':
             raise BeatmapNotDownloading
         content_disposition = response.headers['Content-Disposition']
