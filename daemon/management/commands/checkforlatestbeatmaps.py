@@ -26,5 +26,5 @@ class Command(BaseCommand):
             for beatmap_id in beatmap_ids:
                 if redis.lrem(FETCH_QUEUE_KEY, 0, beatmap_id) == 0L:
                     flag = True
-                redis.lpush(FETCH_QUEUE_KEY, beatmap_id)
+                redis.rpush(FETCH_QUEUE_KEY, beatmap_id)
                 self.stderr.write('Enqueued #%d.' % beatmap_id)
