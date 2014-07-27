@@ -2,6 +2,18 @@
 {% load i18n %}
 {% load difficulties_splitter %}
 {% load capture %}
+{% block title %}
+    {% trans 'Listing' %}
+    {% if genre_id or language_id %}
+        -
+        (
+        {% if genre_id %}{% trans 'Genre' %}:{% trans genre.caption %}{% endif %}
+        {% if genre_id and language_id %} / {% endif %}
+        {% if language_id %}{% trans 'Language' %}:{% trans language.caption %} {% endif %}
+        )
+    {% endif %}
+    - {% blocktrans %}Page {{ page_id }}{% endblocktrans %}
+{% endblock %}
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
     <li class="right">»</li>

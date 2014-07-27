@@ -1,6 +1,7 @@
 {% extends "website/base.html" %}
 {% load i18n %}
 {% load difficulties_splitter %}
+{% block title %}{{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}{% endblock %}
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
     <li class="right">»</li>
