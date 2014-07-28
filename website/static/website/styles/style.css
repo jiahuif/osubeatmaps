@@ -349,11 +349,15 @@ button, input, textarea {
 }
 
 #bm_download_icon {
-    background-image: url(../images/download-icon.png);
+    background: transparent url(../images/download-icon.png) no-repeat;
+    width: 32px;
+    height: 32px;
 }
 
 #bm_details_icon {
-    background-image: url(../images/osu-icon.png);
+    background: transparent url(../images/osu-icon.png) no-repeat;
+    width: 32px;
+    height: 32px;
 }
 
 #bm_download {
