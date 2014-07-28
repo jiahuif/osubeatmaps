@@ -2,6 +2,8 @@
 {% load staticfiles %}
 {% load i18n %}
 {% load lang_url %}
+{% load capture %}
+{% load json_lines_array %}
 <html>
 <head lang="{{ LANGUAGE_CODE }}">
     <meta charset="UTF-8">
@@ -23,17 +25,22 @@
 <div class="container">
 
     <header class="header"><a href="{% url 'website:index' %}" class="header_title">osu! Beatmaps</a>
-
-        <div class="language_switch">
-            <select id="language-selection" onchange="return redirect_to($(this).val()) || true;">
-                {% for lang_code, lang_name in languages %}
-
-                    <option value="{% change_lang lang_code %}" {% if LANGUAGE_CODE == lang_code %}
-                            selected {% endif %}> {{ lang_code|language_name_local }}</option>
-
-                {% endfor %}
-            </select>
-        </div>
+        {% capture lang_switch_html %}
+            <aside class="language_switch">
+                <select id="language-selection" onchange="return redirect_to($(this).val()) || true;">
+                    {% for lang_code, lang_name in languages %}
+                        <option value="{% change_lang lang_code %}" {% if LANGUAGE_CODE == lang_code %}
+                                selected {% endif %}> {{ lang_code|language_name_local }}</option>
+                    {% endfor %}
+                </select>
+            </aside>
+        {% endcapture %}
+        <script language="javascript" type="text/javascript">
+            var lang_switch_html = [];
+            lang_switch_html = {{ lang_switch_html|json_lines_array }};
+            document.write(lang_switch_html.join(' '));
+            lang_switch_html = undefined;
+        </script>
     </header>
 
 
@@ -42,12 +49,20 @@
             {% block nav_line %}
             {% endblock %}
         </ul>
-        <div class="nav_search">
-            <form action="/" method="post" id="search_form" onsubmit="return do_search(this);">
-                <input name="keyword" type="text" id="keyword" style="width:400px"/>
-                <input name="" type="submit" value="{% trans 'Search' %}"/>
-            </form>
-        </div>
+        {% capture nav_search_html %}
+            <div class="nav_search">
+                <form action="/" method="post" id="search_form" onsubmit="return do_search(this);">
+                    <input name="keyword" type="text" id="keyword" style="width:400px"/>
+                    <input name="" type="submit" value="{% trans 'Search' %}"/>
+                </form>
+            </div>
+        {% endcapture %}
+        <script language="javascript" type="text/javascript">
+            var nav_search_html = [];
+            nav_search_html = {{ nav_search_html|json_lines_array }};
+            document.write(nav_search_html.join(' '));
+            nav_search_html = undefined;
+        </script>
     </nav>
     <div class="content">
         {% block content %}{% endblock %}
