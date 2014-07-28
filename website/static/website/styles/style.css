@@ -470,83 +470,123 @@ button, input, textarea {
 }
 
 .d_easy {
-    background-image: url(../images/difficulties/easy.png)
+    background: transparent url(../images/difficulties/easy.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_normal {
-    background-image: url(../images/difficulties/normal.png)
+    background: transparent url(../images/difficulties/normal.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_hard {
-    background-image: url(../images/difficulties/hard.png)
+    background: transparent url(../images/difficulties/hard.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_insane {
-    background-image: url(../images/difficulties/insane.png)
+    background: transparent url(../images/difficulties/insane.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_expert {
-    background-image: url(../images/difficulties/expert.png);
+    background: transparent url(../images/difficulties/expert.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_easy-t {
-    background-image: url(../images/difficulties/easy-t.png)
+    background: transparent url(../images/difficulties/easy-t.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_normal-t {
-    background-image: url(../images/difficulties/normal-t.png)
+    background: transparent url(../images/difficulties/normal-t.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_hard-t {
-    background-image: url(../images/difficulties/hard-t.png)
+    background: transparent url(../images/difficulties/hard-t.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_insane-t {
-    background-image: url(../images/difficulties/insane-t.png)
+    background: transparent url(../images/difficulties/insane-t.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_expert-t {
-    background-image: url(../images/difficulties/expert-t.png);
+    background: transparent url(../images/difficulties/expert-t.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_easy-m {
-    background-image: url(../images/difficulties/easy-m.png)
+    background: transparent url(../images/difficulties/easy-m.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_normal-m {
-    background-image: url(../images/difficulties/normal-m.png)
+    background: transparent url(../images/difficulties/normal-m.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_hard-m {
-    background-image: url(../images/difficulties/hard-m.png)
+    background: transparent url(../images/difficulties/hard-m.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_insane-m {
-    background-image: url(../images/difficulties/insane-m.png)
+    background: transparent url(../images/difficulties/insane-m.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_expert-m {
-    background-image: url(../images/difficulties/expert-m.png)
+    background: transparent url(../images/difficulties/expert-m.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_easy-f {
-    background-image: url(../images/difficulties/easy-f.png)
+    background: transparent url(../images/difficulties/easy-f.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_normal-f {
-    background-image: url(../images/difficulties/normal-f.png)
+    background: transparent url(../images/difficulties/normal-f.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_hard-f {
-    background-image: url(../images/difficulties/hard-f.png)
+    background: transparent url(../images/difficulties/hard-f.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_insane-f {
-    background-image: url(../images/difficulties/insane-f.png)
+    background: transparent url(../images/difficulties/insane-f.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .d_expert-f {
-    background-image: url(../images/difficulties/expert-f.png)
+    background: transparent url(../images/difficulties/expert-f.png) no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .right-info {
