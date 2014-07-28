@@ -1,5 +1,6 @@
 {% extends "website/base.html" %}
 {% load i18n %}
+{% load osu_images %}
 {% block title %}{% trans 'Download' %} {{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}{% endblock %}
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
@@ -20,7 +21,7 @@
     <header class="bm_title"><span>{{ beatmap.artist }} - {{ beatmap.title }}</span></header>
     <article id="bm_download_content">
         <div id="bm_info_preview_img">
-            <img id="bm_download_preview" src="http://b.ppy.sh/thumb/{{ beatmap.id }}l.jpg" width="160" height="120"
+            <img id="bm_download_preview" src="{{ beatmap.id|osu_thumb_large }}" width="160" height="120"
                  alt="Preview Image"
                     />
         </div>

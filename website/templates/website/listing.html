@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load difficulties_splitter %}
 {% load capture %}
+{% load osu_images %}
 {% block title %}
     {% trans 'Listing' %}
     {% if genre_id or language_id %}
@@ -84,7 +85,7 @@
         {% for item in beatmaps %}
             <div class="listing_item">
                 <a class="listing_img_link" href="{% url 'website:item' item.id %}"><img
-                        src="http://b.ppy.sh/thumb/{{ item.id }}.jpg"
+                        src="{{ item.id|osu_thumb_small }}"
                         class="listing_item_img" alt="{{ item.title }}" width="80"
                         height="60"/></a>
 

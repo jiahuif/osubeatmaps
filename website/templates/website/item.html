@@ -1,6 +1,7 @@
 {% extends "website/base.html" %}
 {% load i18n %}
 {% load difficulties_splitter %}
+{% load osu_images %}
 {% block title %}{{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}{% endblock %}
 {% block nav_line %}
     <li class="nav_item"><a href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
@@ -9,7 +10,8 @@
             href="{% url 'website:listing' 0 0 1 %}">{% trans 'Listing' %}</a></li>
     <li class="right">»</li>
     <li class="nav_item nav_item_selected"><a
-            href="{% url 'website:item' beatmap.id %}">{{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}</a></li>
+            href="{% url 'website:item' beatmap.id %}">{{ beatmap.id }} {{ beatmap.artist }} - {{ beatmap.title }}</a>
+    </li>
 {% endblock %}
 
 {% block content %}
@@ -71,7 +73,7 @@
         <div id="bm_info_description_container">
             <div id="bm_info_description_left">
                 <div id="bm_info_preview_img">
-                    <img src="http://b.ppy.sh/thumb/{{ beatmap.id }}l.jpg" width="160" height="120" alt="Preview Image"
+                    <img src="{{ beatmap.id|osu_thumb_large }}" width="160" height="120" alt="Preview Image"
                             /></div>
                 <div id="bm_info_description_preview_audio"><a href="#">Click to play</a></div>
             </div>
