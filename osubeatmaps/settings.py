@@ -55,7 +55,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 ROOT_URLCONF = 'osubeatmaps.urls'
-
+APPEND_SLASH = True
 WSGI_APPLICATION = 'osubeatmaps.wsgi.application'
 
 
