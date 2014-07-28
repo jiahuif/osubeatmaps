@@ -3,7 +3,6 @@ from ftplib import FTP
 from django.utils.http import urlquote
 
 from common.models import Download
-
 from daemon.handlers.base import BaseHandler
 
 
@@ -46,11 +45,15 @@ class SimpleFTPHandler(BaseHandler):
         :return:
         :rtype Download
         """
-        self.open_connection()
         filename = self.slug_filename_on_unix(suggested_filename)
+        beatmap_id = int(filename.split(' ')[0])
+        try:
+            return Download.objects.get(beatmap_id=beatmap_id, server=self.server)
+        except Download.DoesNotExist:
+            pass
+        self.open_connection()
         self.ftp.storbinary('STOR ' + filename, source)
         self.close_connection()
-        beatmap_id = int(filename.split(' ')[0])
         download = Download(beatmap_id=beatmap_id, server=self.server, url=self.get_url(filename))
         return download
 
