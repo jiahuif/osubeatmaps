@@ -116,7 +116,7 @@ msgid ""
 msgstr "為了節省下載的時間，請選擇距離您最近的下載映象。"
 
 #: templates/website/download.html:38
-msgid "No mirrors avaliable. Please check back later."
+msgid "No mirrors available. Please check back later."
 msgstr "目前沒有可用的下載映象，請稍後再來。"
 
 #: templates/website/item.html:20

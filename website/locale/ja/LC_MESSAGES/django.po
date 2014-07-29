@@ -117,7 +117,7 @@ msgid ""
 msgstr ""
 
 #: templates/website/download.html:41
-msgid "No mirrors avaliable. Please check back later."
+msgid "No mirrors available. Please check back later."
 msgstr ""
 
 #: templates/website/item.html:23
