@@ -73,8 +73,9 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGES = (
-    ('zh-cn', _('Simplified Chinese')),
     ('en', _('English')),
+    ('zh-cn', _('Simplified Chinese')),
+    ('zh-tw', _('Traditional Chinese')),
 )
 
 LANGUAGE_CODE = 'en'
