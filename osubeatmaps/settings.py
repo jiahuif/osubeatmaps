@@ -76,6 +76,7 @@ LANGUAGES = (
     ('en', _('English')),
     ('zh-cn', _('Simplified Chinese')),
     ('zh-tw', _('Traditional Chinese')),
+    ('ja', _('Japanese')),
 )
 
 LANGUAGE_CODE = 'en'

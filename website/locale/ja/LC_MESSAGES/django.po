@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-29 17:41+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Translators: Genres
+#. Translators: Languages
+#: texts.py:6 texts.py:27
+msgid "Any"
+msgstr "任意"
+
+#. Translators: Genres
+#: texts.py:8
+msgid "Unspecified"
+msgstr "不特定"
+
+#. Translators: Genres
+#: texts.py:10
+msgid "Video Game"
+msgstr "ビデオゲーム"
+
+#. Translators: Genres
+#: texts.py:12
+msgid "Anime"
+msgstr "アニメ"
+
+#. Translators: Genres
+#: texts.py:14
+msgid "Rock"
+msgstr "ロックンロール"
+
+#. Translators: Genres
+#: texts.py:16
+msgid "Pop"
+msgstr "ポップミュージック"
+
+#. Translators: Genres
+#. Translators: Languages
+#: texts.py:18 texts.py:31
+msgid "Other"
+msgstr "その他"
+
+#. Translators: Genres
+#: texts.py:20
+msgid "Novelty"
+msgstr "新規"
+
+#. Translators: Genres
+#: texts.py:22
+msgid "Hip Hop"
+msgstr "ヒップホップ"
+
+#. Translators: Genres
+#: texts.py:24
+msgid "Electronic"
+msgstr "電子"
+
+#. Translators: Languages
+#: texts.py:29
+msgid "Chinese"
+msgstr "中国語"
+
+#. Translators: Languages
+#: texts.py:33
+msgid "Instrumental"
+msgstr "楽器の"
+
+#: templates/website/base.html:56
+msgid "Search"
+msgstr "検索"
+
+#: templates/website/base.html:74
+msgid "Official osu! Website"
+msgstr "公式サイト"
+
+#: templates/website/base.html:77 templates/website/disclaimer.html:3
+#: templates/website/disclaimer.html:7 templates/website/disclaimer.html:12
+msgid "Disclaimer"
+msgstr "免責事項"
+
+#: templates/website/disclaimer.html:5 templates/website/download.html:6
+#: templates/website/index.html:3 templates/website/index.html.py:5
+#: templates/website/item.html:7 templates/website/listing.html:19
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/website/download.html:4 templates/website/download.html.py:16
+#: templates/website/item.html:65
+msgid "Download"
+msgstr "ダウンロード"
+
+#: templates/website/download.html:9 templates/website/index.html:7
+#: templates/website/item.html:10 templates/website/listing.html:7
+#: templates/website/listing.html.py:23 templates/website/listing.html:27
+msgid "Listing"
+msgstr "リスト"
+
+#: templates/website/download.html:29
+msgid ""
+"To save on download time, it is recommended to choose a mirror site closest "
+"to your location."
+msgstr ""
+
+#: templates/website/download.html:41
+msgid "No mirrors avaliable. Please check back later."
+msgstr ""
+
+#: templates/website/item.html:23
+msgid "Artist"
+msgstr "アーティスト"
+
+#: templates/website/item.html:25 templates/website/listing.html:11
+#: templates/website/listing.html.py:30
+msgid "Genre"
+msgstr "種類"
+
+#: templates/website/item.html:31
+msgid "Title"
+msgstr "タイトル"
+
+#: templates/website/item.html:33 templates/website/listing.html:13
+#: templates/website/listing.html.py:32
+msgid "Language"
+msgstr "言語"
+
+#: templates/website/item.html:39
+msgid "Creator"
+msgstr "作者"
+
+#: templates/website/item.html:42
+msgid "Submitted On"
+msgstr "提出時間"
+
+#: templates/website/item.html:46
+msgid "Source"
+msgstr "出処"
+
+#: templates/website/item.html:48
+msgid "Ranked On"
+msgstr "ランキングタイム"
+
+#: templates/website/item.html:52
+msgid "Difficulties"
+msgstr "難しさ"
+
+#: templates/website/item.html:70
+msgid "Detail"
+msgstr "詳細"
+
+#: templates/website/listing.html:16 templates/website/listing.html.py:36
+#, python-format
+msgid "Page %(page_id)s"
+msgstr "%(page_id)sページ目"
+
+#. Translators: Previous Page
+#: templates/website/listing.html:50
+msgid "Prev"
+msgstr "前のページ"
+
+#. Translators: Previous Page
+#: templates/website/listing.html:73
+msgid "Next"
+msgstr "次のページ"
+
+#: templates/website/listing.html:99
+msgid "mapped by"
+msgstr "作者"
