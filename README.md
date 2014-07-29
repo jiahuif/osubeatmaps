@@ -7,7 +7,7 @@ A website for browsing and downloading beatmaps.
 ###Requirement###
 - ``django`` the framework. (install via pip)
 - ``debug_toolbar`` for debugging. (install via pip)
-- ``MySQL-python`` if MySQL support is needed.
+- ``MySQL-python`` if MySQL support is needed. (install via pip)
 
 Crawler
 --------
