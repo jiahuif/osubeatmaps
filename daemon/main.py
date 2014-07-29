@@ -97,7 +97,7 @@ class BeatmapDaemon:
                     if delta_time < DOWNLOAD_SLEEP_TIME:
                         time.sleep(DOWNLOAD_SLEEP_TIME - delta_time)
                 except Exception as e:
-                    self.logger.exception("An exception raised while processing beatmap #%s. Aborting.", beatmap_id, e)
+                    self.logger.exception("An exception raised while processing beatmap #%d. Aborting.", beatmap_id, e)
                     pass
             except KeyboardInterrupt:
                 self.logger.info("stopping beatmap daemon.")
