@@ -4,6 +4,7 @@ from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from common.models import Beatmap, Genre, Language
+from website.settings import PROXY_DOWNLOAD_SERVERS
 
 
 class IndexView(generic.TemplateView):
@@ -71,4 +72,5 @@ def user(request, username):
 
 def download(request, beatmap_id):
     beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
-    return render(request, 'website/download.html', {"beatmap": beatmap})
+    return render(request, 'website/download.html',
+                  {"beatmap": beatmap, "proxy_download_servers": PROXY_DOWNLOAD_SERVERS})

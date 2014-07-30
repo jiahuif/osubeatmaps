@@ -32,11 +32,29 @@
                 <ul>
                     {% for download in beatmap.download_set.all %}
                         <li class="mirror_site_item">
-                            <a class="mirror_link" id="download_link_{{ forloop.counter }}" rel="nofollow"
+                            <a class="mirror_link" rel="nofollow"
                                href="{{ download.url }}"> {% trans download.server.name %}
-                                <span class="country">{% trans download.server.location %}</span></a></li>
+                                <span class="country">{% trans download.server.location %}</span>
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
+                {% if proxy_download_servers %}
+                    <script language="javascript" type="text/javascript">
+                        if (undefined != renderProxyDownloadServer) {
+                            {% for proxy_download_server in proxy_download_servers %}
+                                renderProxyDownloadServer({
+                                            'sourceIndex': {{ proxy_download_server.source_server_index|escapejs }},
+                                            'regex': '{{ proxy_download_server.regex|escapejs }}',
+                                            'replace': '{{ proxy_download_server.replace|escapejs }}',
+                                            'name': '{{ proxy_download_server.name|escapejs }}',
+                                            'location': '{{ proxy_download_server.location|escapejs }}'
+                                        }
+                                );
+                            {% endfor %}
+                        }
+                    </script>
+                {% endif %}
             {% else %}
                 <p style="font-size: 80%; color:grey;">{% trans 'No mirrors available. Please check back later.' %}</p>
             {% endif %}

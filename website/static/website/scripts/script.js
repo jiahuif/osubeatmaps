@@ -62,3 +62,17 @@ function do_search(form) {
 function redirect_to(url) {
     location.href = url;
 }
+
+function renderProxyDownloadServer(server) {
+    var root = $("#bm_download_list").find("ul");
+    var sourceElement = root.find("li").eq(server.sourceIndex);
+    var sourceUrl = sourceElement.find('a').attr('href');
+    var destinationUrl = sourceUrl.replace(server.regex, server.replace);
+    var destinationElement = sourceElement.clone();
+    destinationElement.find('a').attr('href', destinationUrl);
+    destinationElement.find(".mirror_link").html(
+            server.name + '<span class="country">' + server.location + '</span>'
+    );
+    root.append(destinationElement)
+
+}
