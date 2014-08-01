@@ -24,3 +24,12 @@ def change_lang(context, lang=None, *args, **kwargs):
         activate(cur_language)
 
     return "%s" % url
+
+
+@register.simple_tag(takes_context=True)
+def remove_lang(context):
+    path = context['request'].path
+    """:type: str """
+    parts = path.split('/')
+    parts = parts[:1] + parts[2:]
+    return '/'.join(parts)

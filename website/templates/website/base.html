@@ -18,8 +18,9 @@
     {% get_available_languages as languages %}
 
     {% for lang_code, lang_name in languages %}
-        <link rel="alternate" hreflang="{{ lang_code }}" href="{% change_lang lang_code %}">
+        <link rel="alternate" hreflang="{{ lang_code }}" href="{% change_lang lang_code %}" />
     {% endfor %}
+    <link rel="alternate" hreflang="x-dafault" href="{% remove_lang %}" />
 </head>
 <body class="custom_bg a-font">
 <div class="container">
