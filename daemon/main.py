@@ -4,6 +4,7 @@ import shutil
 import tempfile
 from threading import Thread
 import time
+import django.db
 
 from redis import StrictRedis
 
@@ -91,6 +92,7 @@ class BeatmapDaemon:
                 beatmap_id = int(self.redis.blpop(FETCH_QUEUE_KEY)[1])
                 self.logger.info('Now processing beatmap #%d.', beatmap_id)
                 try:
+                    django.db.close_old_connections()
                     stamp = self.process_single(beatmap_id)
                     self.logger.info('Finished processing beatmap #%d.', beatmap_id)
                     delta_time = time.time() - stamp
