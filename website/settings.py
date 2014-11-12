@@ -11,6 +11,8 @@ PROXY_DOWNLOAD_SERVERS = [
     # },
 ]
 
+EXTERNAL_SEARCH_URL_FORMAT = ""
+
 try:
     from website.settings_local import *
 except ImportError:
