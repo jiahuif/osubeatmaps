@@ -54,7 +54,7 @@ function do_search(form) {
         return false;
     var keyword = form.keyword.value;
     var c = encodeURIComponent(keyword);
-    var uri = 'search.html?q=' + c;
+    var uri = form.action + '?q=' + c;
     location.assign(uri);
     return false;
 }
