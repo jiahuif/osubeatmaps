@@ -2,9 +2,11 @@ from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.utils.http import urlquote
 
 from common.models import Beatmap, Genre, Language
 from website.settings import PROXY_DOWNLOAD_SERVERS
+from website.settings import EXTERNAL_SEARCH_URL_FORMAT
 
 
 class IndexView(generic.TemplateView):
@@ -74,3 +76,10 @@ def download(request, beatmap_id):
     beatmap = get_object_or_404(Beatmap, pk=beatmap_id)
     return render(request, 'website/download.html',
                   {"beatmap": beatmap, "proxy_download_servers": PROXY_DOWNLOAD_SERVERS})
+
+
+def search(request, q=''):
+    if EXTERNAL_SEARCH_URL_FORMAT:
+        return redirect(EXTERNAL_SEARCH_URL_FORMAT % urlquote(q or request.GET.get('q') or ''))
+    else:
+        raise Http404

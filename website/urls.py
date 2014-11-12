@@ -10,5 +10,6 @@ urlpatterns = patterns('',
                        url(r'^user/(?P<username>.+)/$', views.user, name='user'),
                        url(r'^listing/(?P<genre_id>\d+)/(?P<language_id>\d+)/(?P<page_id>\d+)/$', views.listing,
                            name='listing'),
+                       url(r'^search/$', views.search, name='search'),
                        url(r'^disclaimer/$', views.DisclaimerView.as_view(), name='disclaimer'),
 )
