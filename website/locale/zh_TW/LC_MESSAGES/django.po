@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-26 23:59+0800\n"
+"POT-Creation-Date: 2014-12-27 12:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,100 +80,107 @@ msgstr "中文"
 msgid "Instrumental"
 msgstr "純音樂"
 
-#: templates/website/base.html:48
+#: templates/website/base.html:11
+msgid "osu! Beatmaps Download | osu! Songs Download"
+msgstr "osu! 曲譜 下载 | osu! 歌曲 下载"
+
+#: templates/website/base.html:59
 msgid "Search"
 msgstr "搜索"
 
-#: templates/website/base.html:59
+#: templates/website/base.html:77
 msgid "Official osu! Website"
 msgstr "osu! 官方網站"
 
-#: templates/website/base.html:62 templates/website/disclaimer.html:6
-#: templates/website/disclaimer.html:11
+#: templates/website/base.html:80 templates/website/disclaimer.html:3
+#: templates/website/disclaimer.html:7 templates/website/disclaimer.html:12
 msgid "Disclaimer"
 msgstr "免責聲明"
 
-#: templates/website/disclaimer.html:4 templates/website/download.html:4
-#: templates/website/index.html:4 templates/website/item.html:5
-#: templates/website/listing.html:6
+#: templates/website/disclaimer.html:5 templates/website/download.html:6
+#: templates/website/index.html:3 templates/website/index.html.py:5
+#: templates/website/item.html:7 templates/website/listing.html:19
 msgid "Home"
 msgstr "首頁"
 
-#: templates/website/download.html:7 templates/website/index.html:6
-#: templates/website/item.html:8 templates/website/listing.html:10
-#: templates/website/listing.html.py:14
-msgid "Listing"
-msgstr "曲譜列表"
-
-#: templates/website/download.html:13 templates/website/item.html:62
+#: templates/website/download.html:4 templates/website/download.html.py:16
+#: templates/website/item.html:65
 msgid "Download"
 msgstr "下載"
 
-#: templates/website/download.html:26
+#: templates/website/download.html:9 templates/website/index.html:7
+#: templates/website/item.html:10 templates/website/listing.html:7
+#: templates/website/listing.html.py:23 templates/website/listing.html:27
+msgid "Listing"
+msgstr "曲譜列表"
+
+#: templates/website/download.html:29
 msgid ""
 "To save on download time, it is recommended to choose a mirror site closest "
 "to your location."
 msgstr "為了節省下載的時間，請選擇距離您最近的下載映象。"
 
-#: templates/website/download.html:38
+#: templates/website/download.html:59
 msgid "No mirrors available. Please check back later."
 msgstr "目前沒有可用的下載映象，請稍後再來。"
 
-#: templates/website/item.html:20
+#: templates/website/item.html:23
 msgid "Artist"
 msgstr "藝術家"
 
-#: templates/website/item.html:22 templates/website/listing.html:17
+#: templates/website/item.html:25 templates/website/listing.html:11
+#: templates/website/listing.html.py:30
 msgid "Genre"
 msgstr "類型"
 
-#: templates/website/item.html:28
+#: templates/website/item.html:31
 msgid "Title"
 msgstr "標題"
 
-#: templates/website/item.html:30 templates/website/listing.html:19
+#: templates/website/item.html:33 templates/website/listing.html:13
+#: templates/website/listing.html.py:32
 msgid "Language"
 msgstr "語言"
 
-#: templates/website/item.html:36
+#: templates/website/item.html:39
 msgid "Creator"
 msgstr "作者"
 
-#: templates/website/item.html:39
+#: templates/website/item.html:42
 msgid "Submitted On"
 msgstr "提交日期"
 
-#: templates/website/item.html:43
+#: templates/website/item.html:46
 msgid "Source"
 msgstr "來源"
 
-#: templates/website/item.html:45
+#: templates/website/item.html:48
 msgid "Ranked On"
 msgstr "開始排名時間"
 
-#: templates/website/item.html:49
+#: templates/website/item.html:52
 msgid "Difficulties"
 msgstr "難度"
 
-#: templates/website/item.html:67
+#: templates/website/item.html:70
 msgid "Detail"
 msgstr "詳情"
 
-#: templates/website/listing.html:23
+#: templates/website/listing.html:16 templates/website/listing.html.py:36
 #, python-format
 msgid "Page %(page_id)s"
 msgstr "第 %(page_id)s 頁"
 
 #. Translators: Previous Page
-#: templates/website/listing.html:36
+#: templates/website/listing.html:50
 msgid "Prev"
 msgstr "上一頁"
 
 #. Translators: Previous Page
-#: templates/website/listing.html:59
+#: templates/website/listing.html:73
 msgid "Next"
 msgstr "下一頁"
 
-#: templates/website/listing.html:84
+#: templates/website/listing.html:99
 msgid "mapped by"
 msgstr "作者: "

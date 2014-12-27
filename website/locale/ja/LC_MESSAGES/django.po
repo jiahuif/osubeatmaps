@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-29 17:41+0800\n"
+"POT-Creation-Date: 2014-12-27 12:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,15 +80,19 @@ msgstr "中国語"
 msgid "Instrumental"
 msgstr "楽器の"
 
-#: templates/website/base.html:56
+#: templates/website/base.html:11
+msgid "osu! Beatmaps Download | osu! Songs Download"
+msgstr "osu! 曲をダウンロード"
+
+#: templates/website/base.html:59
 msgid "Search"
 msgstr "検索"
 
-#: templates/website/base.html:74
+#: templates/website/base.html:77
 msgid "Official osu! Website"
 msgstr "公式サイト"
 
-#: templates/website/base.html:77 templates/website/disclaimer.html:3
+#: templates/website/base.html:80 templates/website/disclaimer.html:3
 #: templates/website/disclaimer.html:7 templates/website/disclaimer.html:12
 msgid "Disclaimer"
 msgstr "免責事項"
@@ -116,7 +120,7 @@ msgid ""
 "to your location."
 msgstr ""
 
-#: templates/website/download.html:41
+#: templates/website/download.html:59
 msgid "No mirrors available. Please check back later."
 msgstr ""
 
