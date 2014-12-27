@@ -7,7 +7,8 @@
 <html>
 <head lang="{{ LANGUAGE_CODE }}">
     <meta charset="UTF-8">
-    <title>{% block title %}Template Page{% endblock %} - osu! Beatmaps</title>
+    <title>{% block title %}Template Page{% endblock %} - osu! Beatmaps |
+        {% trans 'osu! Beatmaps Download | osu! Songs Download' %}</title>
     <link href="{% static 'website/styles/style.css' %}" rel="stylesheet" type="text/css"/>
     <!--[if IE]>
     <link href="{% static 'website/styles/ie.css' %}" rel="stylesheet" type="text/css" />
@@ -18,9 +19,9 @@
     {% get_available_languages as languages %}
 
     {% for lang_code, lang_name in languages %}
-        <link rel="alternate" hreflang="{{ lang_code }}" href="{% change_lang lang_code %}" />
+        <link rel="alternate" hreflang="{{ lang_code }}" href="{% change_lang lang_code %}"/>
     {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{% remove_lang %}" />
+    <link rel="alternate" hreflang="x-default" href="{% remove_lang %}"/>
 </head>
 <body class="custom_bg a-font">
 <div class="container">
@@ -52,7 +53,8 @@
         </ul>
         {% capture nav_search_html %}
             <div class="nav_search">
-                <form action="{% url 'website:search' %}" method="get" id="search_form" onsubmit="return do_search(this);">
+                <form action="{% url 'website:search' %}" method="get" id="search_form"
+                      onsubmit="return do_search(this);">
                     <input name="q" type="text" id="keyword" style="width:400px"/>
                     <input name="" type="submit" value="{% trans 'Search' %}"/>
                 </form>
